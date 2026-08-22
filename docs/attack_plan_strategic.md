@@ -11,7 +11,7 @@ This plan covers **three tiers** of bug bounty targets:
 
 1. **Tier 1 (BugBase Programs)** — Indian platforms paying in both cash (Bounty) and non-cash (Swags/Vouchers)
 2. **Tier 2 (Global Top Payers)** — HackerOne, Bugcrowd, Immunefi high-reward programs
-3. **Tier 3 (Voucher/Gift Card Programs)** — Programs that pay via Amazon GC, gift vouchers, or coupon codes
+- Coupon-code testing guidance removed (program-specific)
 
 ---
 
@@ -36,22 +36,22 @@ This plan covers **three tiers** of bug bounty targets:
 | Program | Type | Reward Type | Bounty Range | Managed? |
 |---------|------|-------------|--------------|----------|
 | **BugBase** (own) | Bug Bounty | Bounty Thanks | $100-$500 Critical | Managed |
-| **boAt Lifestyle** | VDP | **Swags Thanks** (Coupon Codes) | Coupon codes for products | Managed |
+- Coupon-code testing guidance removed (program-specific)
 | **Needl.Ai** | VDP | Thanks | Non-monetary (recognition) | Managed |
 | **Tata Motors** | VDP | Thanks | Non-monetary | Upcoming |
 | **Cloud Software Group** | Bug Bounty | Bounty Thanks | TBD | Upcoming |
-| **Groww** | Bug Bounty | Bounty Thanks | **$100-$3,000** | Self-managed |
+| **Fintech-A** | Bug Bounty | Bounty Thanks | **$100-$3,000** | Self-managed |
 | **Airmeet** | VDP | **Swags Thanks** | Swag items | Self-managed |
 | **Shelfmerch VDP** | VDP | **Swags Thanks** | Swag items | Self-managed |
 | **Subspace Money** | VDP | Thanks | Non-monetary | Self-managed |
-| **Razorpay BugBounty** | Bug Bounty | Bounty Thanks | Upcoming (likely $100-$2000) | Self-managed |
+| **Payments-C BugBounty** | Bug Bounty | Bounty Thanks | Upcoming (likely $100-$2000) | Self-managed |
 | **OLX India** | VDP | Thanks | Non-monetary | Self-managed |
 | **Axion Ray VDP** | VDP | **Swags Thanks** | Swag items | Self-managed |
 | **dekco.ai** | VDP | Thanks | Non-monetary | Self-managed |
 
 ### Reward Legend
 - **Bounty Thanks** = Monetary/Cash reward
-- **Swags Thanks** = Physical swag, coupon codes, or gift vouchers (NON-monetary)
+- Coupon-code testing guidance removed (program-specific)
 - **Thanks** = Recognition only (Hall of Fame)
 
 ---
@@ -98,7 +98,7 @@ This plan covers **three tiers** of bug bounty targets:
 
 | Program | Reward Type | Details |
 |---------|------------|---------|
-| **boAt Lifestyle** (BugBase) | Coupon Codes | Redeemable on boat-lifestyle.com for purchases |
+- Coupon-code testing guidance removed (program-specific)
 | **PocketRN** | Amazon Gift Card | Up to $200 Amazon GC |
 | **HackerEarth** | Gift Vouchers | $50-$125 equivalent in gift vouchers + swag |
 | **Xoxoday** | Gift Cards | Various brand gift cards |
@@ -116,18 +116,18 @@ This plan covers **three tiers** of bug bounty targets:
 
 | Priority | Vector | Target Programs | Why |
 |----------|--------|-----------------|-----|
-| **P0** | Authentication/Login | Groww, boAt, BugBase | ATO = critical impact for fintech/ecom |
-| **P0** | API Endpoints | Groww, boAt, Razorpay | PII exposure, financial data |
-| **P0** | Payment/Billing Flows | Groww, Razorpay | Direct financial impact |
-| **P1** | IDOR | Groww, boAt, Razorpay | Sequential user IDs expose data |
+| **P0** | Authentication/Login | Fintech-A, Ecom-B, BugBase | ATO = critical impact for fintech/ecom |
+| **P0** | API Endpoints | Fintech-A, Ecom-B, Payments-C | PII exposure, financial data |
+| **P0** | Payment/Billing Flows | Fintech-A, Payments-C | Direct financial impact |
+| **P1** | IDOR | Fintech-A, Ecom-B, Payments-C | Sequential user IDs expose data |
 | **P1** | Password Reset | All with login | Account takeover |
-| **P1** | JWT/Token Analysis | Groww, Razorpay | Token forgery/leakage |
-| **P1** | OTP Bypass | Groww (fintech) | Financial fraud |
+| **P1** | JWT/Token Analysis | Fintech-A, Payments-C | Token forgery/leakage |
+| **P1** | OTP Bypass | Fintech-A (fintech) | Financial fraud |
 | **P2** | SSRF | All with webhooks | Internal network access |
 | **P2** | S3/Cloud Storage | All (company-name buckets) | Data exposure |
-| **P2** | Subdomain Takeover | boAt, Airmeet | Rapid win |
+| **P2** | Subdomain Takeover | Ecom-B, Airmeet | Rapid win |
 | **P3** | CORS Misconfigs | All | Information disclosure |
-| **P3** | Directory Listing | boAt, Airmeet | Quick recon wins |
+| **P3** | Directory Listing | Ecom-B, Airmeet | Quick recon wins |
 
 ### Global Top Programs
 
@@ -150,7 +150,7 @@ This plan covers **three tiers** of bug bounty targets:
 
 ## Methodology 1: BugBase Indian Programs (Voucher + Cash)
 
-**Target:** Groww, boAt Lifestyle, Razorpay, Airmeet, Shelfmerch
+**Target:** Fintech-A, Ecom-B Lifestyle, Payments-C, Airmeet, Shelfmerch
 
 ```
 Recon → Auth Testing → API Discovery → IDOR Check → 
@@ -187,7 +187,7 @@ Step 5: IDOR Testing
   - Try: /api/order/1001 -> change to 1000, 1002
   - Try: UUID-based IDs that might be guessable
 
-Step 6: OTP/Billing Bypass (Groww, Razorpay)
+Step 6: OTP/Billing Bypass (Fintech-A, Payments-C)
   - Intercept OTP verification, try removing param
   - Try race condition on OTP validate endpoint
   - Try reusing old OTP tokens
@@ -228,7 +228,7 @@ IDOR → SSRF → Business Logic → Report
 
 ## Methodology 3: Voucher/Gift Card Programs
 
-**Target:** boAt Lifestyle, PocketRN, HackerEarth, Xoxoday
+**Target:** Ecom-B Lifestyle, PocketRN, HackerEarth, Xoxoday
 
 ```
 Recon → Find auth/API vulns → Low/Medium severity is fine → 
@@ -296,8 +296,8 @@ Fast submission → Collect vouchers → Scale
 ## Per Target Tier
 
 ### Tier 1: BugBase Programs (Voucher Focus)
-- **Success:** Any valid finding on boAt Lifestyle → Coupon Code reward
-- **Success:** Medium+ finding on Groww → $250-$3,000 bounty
+- **Success:** Any valid finding on Ecom-B Lifestyle → Coupon Code reward
+- **Success:** Medium+ finding on Fintech-A → $250-$3,000 bounty
 - **Minimum:** Low severity on any BugBase program → recognition
 - **Pivot:** After 5 hours with no findings on one program, switch targets
 
@@ -317,9 +317,9 @@ Fast submission → Collect vouchers → Scale
 # PHASE 5: THE "WHAT IF" FRAMEWORK
 
 ## What if auth is required?
-- **BugBase/Groww:** Register with real Indian mobile number (SIM required)
+- **BugBase/Fintech-A:** Register with real Indian mobile number (SIM required)
 - **Shopify:** Create test store via partners.shopify.com/signup/bugbounty
-- **boAt:** Register with email on boat-lifestyle.com
+- **Ecom-B:** Register with email on ecom-b.example
 - **General:** Use temp email for non-critical signups, real for important
 
 ## What if WAF blocks payloads?
@@ -366,12 +366,12 @@ Fast submission → Collect vouchers → Scale
 ```
 1. Register on bugbase.ai (if not already)
 2. Browse Programs Directory → Apply to Apollo
-3. Start with boAt Lifestyle (low competition, coupon rewards)
-4. Check: auth.boat-lifestyle.com, wearable.boat-lifestyle.com
+3. Start with Ecom-B Lifestyle (low competition, coupon rewards)
+4. Check: auth.ecom-b.example, wearable.ecom-b.example
 5. Test: Subdomain takeover, config exposure, CORS
 ```
 
-## Session 2: Groww Deep Dive (4 hours)
+## Session 2: Fintech-A Deep Dive (4 hours)
 ```
 1. Subdomain enum: groww.in
 2. API discovery with JS bundle analysis
@@ -402,14 +402,14 @@ Fast submission → Collect vouchers → Scale
 
 | Rank | Target | Reward Type | Max Payout | Difficulty | Competition | Priority |
 |------|--------|------------|-----------|------------|-------------|----------|
-| 1 | **boAt Lifestyle** | Coupon Codes (Voucher) | High-value coupons | Easy-Med | **Low** | ⭐⭐⭐⭐⭐ |
-| 2 | **Groww** | Cash (USD) | $3,000 | Medium | **Low (Indian)** | ⭐⭐⭐⭐⭐ |
+- Coupon-code testing guidance removed (program-specific)
+| 2 | **Fintech-A** | Cash (USD) | $3,000 | Medium | **Low (Indian)** | ⭐⭐⭐⭐⭐ |
 | 3 | **HackerEarth** | Gift Vouchers | $125 | Easy | Low | ⭐⭐⭐⭐ |
 | 4 | **BugBase own** | Cash | $500 | Easy | Low | ⭐⭐⭐⭐ |
 | 5 | **Airmeet** | Swags | Swag items | Easy | Low | ⭐⭐⭐ |
 | 6 | **Shopify** | Cash | $200,000 | Hard | High | ⭐⭐⭐ |
 | 7 | **PayPal** | Cash | $30,000 | Hard | High | ⭐⭐⭐ |
-| 8 | **Razorpay** | Cash | TBD (new) | Medium | **Low** | ⭐⭐⭐ |
+| 8 | **Payments-C** | Cash | TBD (new) | Medium | **Low** | ⭐⭐⭐ |
 | 9 | **PocketRN** | Amazon GC | $200 | Easy | Low | ⭐⭐⭐ |
 | 10 | **OpenAI** | Cash | $7,500 | Medium-Hard | High | ⭐⭐ |
 | 11 | **Uniswap v4** | Crypto/Stablecoin | $15.5M | Very Hard | Very High | ⭐⭐ |
@@ -420,7 +420,7 @@ Fast submission → Collect vouchers → Scale
 # REWARD EXTRACTION GUIDE
 
 ## For BugBase "Swags Thanks" Programs
-- **boAt Lifestyle:** Coupon codes are emailed — redeem on boat-lifestyle.com
+- Coupon-code testing guidance removed (program-specific)
 - **Airmeet/Shelfmerch:** Physical swag — check shipping timelines
 - **BugBase:** Cash bounties via platform payment system (managed payouts)
 
@@ -433,7 +433,7 @@ Fast submission → Collect vouchers → Scale
 ## For Voucher Programs
 - **Amazon GC (PocketRN):** Emailed code, redeem on Amazon
 - **Gift vouchers (HackerEarth):** Emailed voucher codes
-- **Coupon codes (boAt):** Apply at checkout on website
+- Coupon-code testing guidance removed (program-specific)
 
 ---
 
@@ -445,8 +445,6 @@ Fast submission → Collect vouchers → Scale
 - Target list: `~/notes/bugbounty-targets-and-osint.md`
 - WAF bypass: `~/.config/opencode/common/WAF_BYPASS_ADVANCED.md`
 - SSRF guide: `~/.config/opencode/common/SSRF_ADVANCED.md`
-- Auth testing: `~/.config/opencode/common/LOSTSEC_AUTH_SESSION.md`
-- S3 buckets: `~/.config/opencode/common/LOSTSEC_S3_BUCKETS.md`
 
 ---
 

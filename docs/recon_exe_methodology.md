@@ -1,6 +1,5 @@
 # Recon.exe — Bug Bounty Reconnaissance Methodology
 
-**Source:** Lostsec YouTube — [403/404 Access, GoSpider, JS Hunting, Stored XSS, Admin Panel & AWS S3 Finds](https://www.youtube.com/watch?v=9Y8fuZagHfs)
 
 ---
 
@@ -279,5 +278,4 @@ Step 5: Run active crawl (GoSpider/Katana) for remaining surface
 
 ---
 
-**Reference:** Lostsec — "Recon.exe: 403/404 Access, GoSpider, JS Hunting, Stored XSS, Admin Panel & AWS S3 Finds"  
 https://www.youtube.com/watch?v=9Y8fuZagHfs
