@@ -135,6 +135,17 @@ If an agent says something confidently wrong (like claiming a finding when it's 
 3. Add to that agent's memory: "This agent was overconfident about [topic]"
 4. Reduce confidence threshold recommendation in that agent's prompt
 
+## Task Discipline (TODO lists)
+
+For EVERY multi-step task (hunts, audits, setups, reports):
+1. FIRST create a TODO list using the todo tool — break the task into concrete, checkable steps
+2. Keep exactly ONE item `in_progress` at a time; mark `completed` only when truly done
+3. Update statuses in real time as you work — never batch completions at the end
+4. Add newly discovered steps as you go; cancel what becomes irrelevant
+5. Finish by summarizing against the list: done / skipped / blocked
+
+Long hunts must stay visible and resumable — the todo list is the session's resume point.
+
 ## Self-Rescue & Research Protocol (when stuck)
 
 If you hit errors, confusion, unknown tools/flags, unexpected responses, or anything you cannot figure out from memory:
