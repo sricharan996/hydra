@@ -17,6 +17,7 @@
 
 <br>
 
+<a href="https://sricharan996.github.io"><img src="https://img.shields.io/badge/🌐_WEBSITE-LIVE-00E5FF?style=for-the-badge&logo=githubpages&logoColor=white"></a>
 <a href="#-quickstart"><img src="https://img.shields.io/badge/SETUP-ONE%20COMMAND-00FF41?style=for-the-badge"></a>
 <a href="#-the-agent-pipeline"><img src="https://img.shields.io/badge/AGENTS-7-FF003C?style=for-the-badge"></a>
 <a href="#skills"><img src="https://img.shields.io/badge/SKILL%20MODULES-931-9D00FF?style=for-the-badge"></a>
