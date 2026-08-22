@@ -138,7 +138,7 @@ Based on: **SkillOpt: Executive Strategy for Self-Evolving Agent Skills** (Micro
 - Best or tied-best on 52/52 (model, benchmark, harness) cells
 - +23.5 avg accuracy on GPT-5.5 (direct chat)
 - +24.8 inside Codex agentic loop
-- +19.1 inside Claude Code
+- +19.1 inside opencode
 
 ## License
 

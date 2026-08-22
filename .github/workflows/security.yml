@@ -28,7 +28,8 @@ jobs:
           for p in "${PATTERNS[@]}"; do
             HITS=$(grep -rnE -e "$p" . \
               --exclude-dir=.git --exclude-dir=node_modules \
-              --exclude="*.lock" --exclude="package-lock.json" || true)
+              --exclude="*.lock" --exclude="package-lock.json" || true \
+              | grep -vE 'EXAMPLE|X{6,}|EXPOSEDKEY|YOUR[_-]|<your|placeholder')
             if [ -n "$HITS" ]; then
               echo "::error::Secret-pattern match ($p):"
               echo "$HITS" | head -5

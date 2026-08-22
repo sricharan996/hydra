@@ -54,5 +54,5 @@ Edit `skillopt_config.yaml` to customize:
 - Learning rate budget
 - Validation split
 - Epoch count
-- Backend model (OpenAI, Claude, local)
+- Backend model (OpenAI, the AI agent, local)
 - Benchmark tasks

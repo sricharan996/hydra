@@ -246,7 +246,7 @@ Then: "Please continue from where you left off."
 | Model Family | Known Patterns |
 |---|---|
 | GPT-4 / GPT-4o | Resistant to basic DAN; vulnerable to multi-step and encoding |
-| Claude | Strong refusal; context-length exploits and few-shot manipulation |
+| the AI agent | Strong refusal; context-length exploits and few-shot manipulation |
 | Llama / open-source | Varies wildly by fine-tune; system prompt often easily extractable |
 | Gemini | Multimodal injection via image-embedded text |
 | Mistral / Mixtral | System prompt extraction via translation; role-play vulnerable |
