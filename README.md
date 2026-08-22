@@ -93,6 +93,22 @@
 
 Every agent ships with mission context, decision frameworks and output contracts — not just command dumps.
 
+### Inside each agent file (`agents/<name>.md`)
+
+Each of the seven files is a complete operating manual, not a prompt stub:
+
+| File | Mission | Built-in discipline |
+|------|---------|---------------------|
+| `hunter.md` (559 ln) | Recon-to-exploitation pipeline execution | Standing decision table (403→bypass, WAF→vendor bypass, silence→change layer); findings hashed & saved instantly; scope-gated |
+| `verifier.md` (149 ln) | Destroy false positives before triage does | 3-request reproducibility, baseline-vs-exploit diffing, ≥80% confidence bar, calibration psychology |
+| `reporter.md` (255 ln) | Submission-ready writeups | Triager-psychology rules, ≤120-char titles, working curl PoCs, honest severities |
+| `plan.md` (149 ln) | Pre-engagement strategy | Web research → P0–P3 vector prioritization → success criteria → pivot conditions |
+| `auditor.md` (115 ln) | Source-level code review | 6 phases with rationale; trust-boundary mapping; every finding needs location+reachability+PoC |
+| `recon.md` (97 ln) | Passive-first surface mapping | Scope gate before packet one; saturation detection; structured handoff contract; tool fallback chains |
+| `debug.md` (167 ln) | Cross-agent self-improvement | Mistake→fix→prevention-rule logging; memory propagation; parallel web-search self-rescue protocol |
+
+All seven also carry: **TODO-list discipline** (plan before acting, live status updates) and the **Self-Rescue Protocol** (parallel websearch + primary-source fetch + 2-source cross-verification when stuck).
+
 <a id="skills"></a>
 ## 🧩 Skill Modules — 928
 
@@ -111,6 +127,60 @@ Machine-indexed in [`skills/index.json`](skills/index.json) so agents route prog
 **2025–2026 state of the art included:** Next.js middleware bypass (CVE-2025-29927) · XS-Leaks (ETag length oracle) · CSS exfiltration · web timing attacks · 0.CL desync · error-based blind SSTI.
 
 <a id="scripts"></a>
+
+### MITRE ATT&CK coverage
+
+| Tactic | ID | Skills | | Tactic | ID | Skills |
+|--------|----|-------:|-|--------|----|-------:|
+| Reconnaissance | TA0043 | 103 | | Credential Access | TA0006 | 202 |
+| Resource Development | TA0042 | 22 | | Discovery | TA0007 | 237 |
+| Initial Access | TA0001 | 467 | | Lateral Movement | TA0008 | 68 |
+| Execution | TA0002 | 350 | | Collection | TA0009 | 172 |
+| Persistence | TA0003 | 444 | | Command and Control | TA0011 | 123 |
+| Privilege Escalation | TA0004 | 464 | | Exfiltration | TA0010 | 82 |
+| Stealth | TA0005 | 442 | | Impact | TA0040 | 50 |
+| Defense Impairment | TA0112 | 92 | | | | |
+
+### What's inside — 29 security domains
+
+| Domain | Skills | Key capabilities |
+|--------|-------:|------------------|
+| Cloud Security | 66 | AWS, Azure, GCP hardening · CSPM · cloud attack emulation · cloud forensics |
+| Threat Hunting | 58 | Hypothesis-driven hunts · LOTL detection · EVTX hunting · fleet hunting |
+| Threat Intelligence | 52 | STIX/TAXII · MISP · OpenCTI · feed integration · actor profiling |
+| Network Security | 43 | IDS/IPS · firewall rules · VLAN segmentation · traffic analysis |
+| Web Application Security | 42 | OWASP Top 10 · SQLi · XSS · SSRF · deserialization |
+| Digital Forensics | 41 | Disk imaging · memory forensics · Hayabusa/KAPE/Plaso timelines |
+| Malware Analysis | 39 | Static/dynamic analysis · reverse engineering · sandboxing |
+| Identity & Access Management | 37 | Entra ID/ROADtools · device-code phishing · PAM · zero trust identity |
+| SOC Operations | 35 | Playbooks · escalation workflows · Graph-log detection · tabletop exercises |
+| Red Teaming | 33 | ADCS/Certipy · BloodHound CE · Sliver/Havoc C2 · NTLM relay |
+| Container Security | 33 | K8s RBAC · image scanning · Falco · container escape |
+| Security Operations | 28 | SIEM correlation · log analysis · alert triage |
+| OT/ICS Security | 28 | Modbus · DNP3 · IEC 62443 · historian defense · SCADA |
+| API Security | 28 | GraphQL · REST · OWASP API Top 10 · WAF bypass |
+| Incident Response | 26 | Breach containment · ransomware response · IR playbooks |
+| Vulnerability Management | 25 | Nessus · scanning workflows · patch prioritization · CVSS |
+| Penetration Testing | 21 | Network · web · cloud · mobile · NetExec lateral movement |
+| DevSecOps | 18 | CI/CD security · Trivy IaC/image scanning · code signing |
+| Zero Trust Architecture | 17 | BeyondCorp · CISA maturity model · microsegmentation |
+| Endpoint Security | 17 | EDR · LOTL detection · fileless malware · persistence hunting |
+| Cryptography | 16 | TLS · Ed25519 · post-quantum migration · key management |
+| Phishing Defense | 15 | Email authentication · BEC detection · phishing IR |
+| AI Security | 14 | LLM red-teaming (garak/PyRIT) · prompt injection · MCP/agentic security · guardrails |
+| Mobile Security | 13 | Android/iOS analysis · mobile pentesting · MDM forensics |
+| Ransomware Defense | 13 | Precursor detection · response · recovery · encryption analysis |
+| Compliance & Governance | 9 | NIST 800-30/RMF · CMMC · HIPAA · TPRM · CIS benchmarks |
+| Supply Chain Security | 8 | SBOMs · dependency confusion · malicious-package triage · SLSA/Sigstore |
+| Deception Technology | 6 | Honeytokens · canarytokens · breach detection |
+| Hardware & Firmware Security | 4 | CHIPSEC/UEFI audit · Secure Boot bypass · TPM attestation · bootkit hunting |
+
+### The core library — original 111 hand-built modules
+
+The hand-crafted foundation beneath the catalog: **38** web exploitation (XSS→smuggling→desync), **16** platform attacks (AD/kerberos/AD CS, privesc), **11** binary exploitation (heap/ROP/kernel/V8), **9** recon, **6** crypto, **3** mobile, **2** AI security — plus the WAF bypass database, error-based SSTI & modern-desync deep-dives, ORM filter injection, XS-Leaks and Next.js attack playbooks.
+
+Curated AI-security reading list: [`docs/AI_SECURITY_RESOURCES.md`](docs/AI_SECURITY_RESOURCES.md).
+
 ## ⚙️ Automation Scripts
 
 | Script | Purpose |
