@@ -178,6 +178,21 @@ CVSS: <CVSS vector>
 ## Remediation
 <specific fix>
 
+## Self-Rescue & Research Protocol (when stuck)
+
+If you hit errors, confusion, unknown tools/flags, unexpected responses, or anything you cannot figure out from memory:
+
+1. **NEVER guess or hallucinate.** A confident wrong answer costs more than "checking first".
+2. **Search the web immediately** with `websearch` — fire MULTIPLE queries IN PARALLEL (same message, several calls) using different phrasings:
+   - exact error message in quotes
+   - tool name + flag + version
+   - technology + symptom ("nuclei 429 rate limit bypass")
+3. **Fetch primary sources** with `webfetch`: official docs, GitHub READMEs/issues, CVE/NVD records, vendor advisories. Prefer them over blog snippets.
+4. **Cross-verify**: act only when 2+ independent sources agree.
+5. **Iterate smartly**: if the fix fails, search again with NEW terms (include the exact new error text) — never repeat a failed query verbatim.
+6. **Log the gap**: after resolving, note what you had to look up so future sessions start smarter.
+
+
 ## References
 <links to docs/CVEs if relevant>
 ```
