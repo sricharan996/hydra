@@ -1,24 +1,17 @@
 <div align="center">
 
 ```
- █████╗ ██╗    ██████╗ ██╗   ██╗ ██████╗ 
-██╔══██╗██║    ██╔══██╗██║   ██║██╔════╝ 
-███████║██║    ██████╔╝██║   ██║██║  ███╗
-██╔══██║██║    ██╔══██╗██║   ██║██║   ██║
-██║  ██║██║    ██████╔╝╚██████╔╝╚██████╔╝
-╚═╝  ╚═╝╚═╝    ╚═════╝  ╚═════╝  ╚═════╝ 
-                                         
-██████╗  ██████╗ ██╗   ██╗███╗   ██╗████████╗██╗   ██╗
-██╔══██╗██╔═══██╗██║   ██║████╗  ██║╚══██╔══╝╚██╗ ██╔╝
-██████╔╝██║   ██║██║   ██║██╔██╗ ██║   ██║    ╚████╔╝ 
-██╔══██╗██║   ██║██║   ██║██║╚██╗██║   ██║     ╚██╔╝  
-██████╔╝╚██████╔╝╚██████╔╝██║ ╚████║   ██║      ██║   
-╚═════╝  ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝   ╚═╝      ╚═╝
+██╗  ██╗██╗   ██╗██████╗ ██████╗  █████╗ 
+██║  ██║╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+███████║ ╚████╔╝ ██║  ██║██████╔╝███████║
+██╔══██║  ╚██╔╝  ██║  ██║██╔══██╗██╔══██║
+██║  ██║   ██║   ██████╔╝██║  ██║██║  ██║
+╚═╝  ╚═╝   ╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
 ```
 
-# 🎯 AI BUG BOUNTY SYSTEM
+# 🐉 HYDRA
 
-**7 AI AGENTS · 111 SKILLS · FULL METHODOLOGY · ONE-COMMAND SETUP**
+**THE 7-HEADED AI BUG BOUNTY SYSTEM · 111 SKILLS · FULL METHODOLOGY · ONE-COMMAND SETUP**
 
 👤 **Author:** `sricharan996`
 
@@ -36,9 +29,9 @@
 
 ```
 ┌────────────────────────────────────────────────────────────────────────────┐
-│  An AI-agent-driven bug bounty framework built on opencode. Seven          │
-│  specialized agents run a full pipeline — passive recon to submission-     │
-│  ready reports. Sanitized, credential-free, CI-guarded.                    │
+│  Seven heads. One hunt. HYDRA is an AI-agent bug-bounty framework          │
+│  built on opencode — passive recon to submission-ready reports.            │
+│  Sanitized, credential-free, CI-guarded.                                   │
 │                                                                            │
 │  ⚠️  AUTHORIZED TESTING ONLY — see DISCLAIMER.md                           │
 └────────────────────────────────────────────────────────────────────────────┘
@@ -137,7 +130,7 @@ Strategic attack planning · Recon execution methodology · OSINT targets refere
 ## 🚀 Quickstart
 
 ```bash
-git clone https://github.com/sricharan996/bugbounty-ai-system.git
+git clone https://github.com/sricharan996/hydra.git
 cd bugbounty-ai-system && bash setup.sh     # asks handle + email, installs everything
 
 export OPENROUTER_API_KEY=sk-or-...         # any OpenAI-compatible provider
