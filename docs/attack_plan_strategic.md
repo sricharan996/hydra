@@ -162,9 +162,9 @@ Cloud Storage Check → Report
 
 ```
 Step 1: Subdomain Enumeration
-  - subfinder -d groww.in -all
-  - chaos -d groww.in
-  - assetfinder --subs-only groww.in
+  - subfinder -d target-app.example -all
+  - chaos -d target-app.example
+  - assetfinder --subs-only target-app.example
   → Pipe to httpx for live host detection
 
 Step 2: Tech Stack Fingerprinting
@@ -177,8 +177,8 @@ Step 3: Auth Flow Analysis
   - Test: Mass assignment in registration (role=admin, etc.)
 
 Step 4: API Discovery
-  - katana -u https://groww.in -d 3
-  - gau --subs groww.in
+  - katana -u https://target-app.example -d 3
+  - gau --subs target-app.example
   - Check JS bundles for hardcoded API endpoints
   - Test: /api/v1/, /graphql, /swagger.json, /api-docs
 
@@ -194,7 +194,7 @@ Step 6: OTP/Billing Bypass (Fintech-A, Payments-C)
 
 Step 7: SSRF + Cloud
   - Test webhook/callback URLs in forms
-  - Check S3: groww.s3.amazonaws.com, boat-lifestyle.s3.amazonaws.com
+  - Check S3: target-app.s3.amazonaws.com, target-ecom.s3.amazonaws.com
   - interactsh-client for OOB detection
 
 Step 8: Subdomain Takeover
@@ -373,7 +373,7 @@ Fast submission → Collect vouchers → Scale
 
 ## Session 2: Fintech-A Deep Dive (4 hours)
 ```
-1. Subdomain enum: groww.in
+1. Subdomain enum: target-app.example
 2. API discovery with JS bundle analysis
 3. Auth flow: OTP bypass, rate limiting
 4. IDOR on user/profile endpoints
