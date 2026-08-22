@@ -11,7 +11,7 @@ REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 OC_DIR="$HOME/.config/opencode"
 
 echo "==============================================="
-echo "   AI BUG BOUNTY SYSTEM — SETUP"
+echo "   🐉 HYDRA — AI BUG BOUNTY SYSTEM SETUP"
 echo "==============================================="
 
 # --- preflight -------------------------------------------------
@@ -66,6 +66,7 @@ done
 echo ""
 echo "==============================================="
 echo " DONE. Next steps:"
+echo "  0. If you just installed opencode:  source ~/.bashrc"
 echo "  1. Set an API key for your model provider:"
 echo "       export OPENROUTER_API_KEY=sk-or-...   (or NVIDIA_NIM_API_KEY=...)"
 echo "  2. Optional tooling:  bash $REPO_DIR/install-tools.sh"

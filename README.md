@@ -129,17 +129,22 @@ Strategic attack planning · Recon execution methodology · OSINT targets refere
 
 ## 🚀 Quickstart
 
+**1 — In your shell** (install + configure):
+
 ```bash
 git clone https://github.com/sricharan996/hydra.git
-cd hydra && bash setup.sh     # asks handle + email, installs everything
+cd hydra && bash setup.sh        # asks handle + email, installs everything
+source ~/.bashrc                 # pick up freshly installed binaries
+export OPENROUTER_API_KEY=sk-or-...   # any OpenAI-compatible provider
+# bash install-tools.sh          # optional: recon toolchain
+```
 
-export OPENROUTER_API_KEY=sk-or-...         # any OpenAI-compatible provider
-bash install-tools.sh                        # optional: recon toolchain
+**2 — Inside the opencode session** (run `opencode` first, then type these):
 
-opencode
-> /hunt example.com                          # ONLY on authorized targets!
-> /verify <finding-file>
-> /report <verified-finding>
+```
+/hunt example.com                # ONLY on authorized targets!
+/verify <finding-file>
+/report <verified-finding>
 ```
 
 ## 🛡️ Safety Model
