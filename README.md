@@ -131,7 +131,7 @@ Strategic attack planning · Recon execution methodology · OSINT targets refere
 
 ```bash
 git clone https://github.com/sricharan996/hydra.git
-cd bugbounty-ai-system && bash setup.sh     # asks handle + email, installs everything
+cd hydra && bash setup.sh     # asks handle + email, installs everything
 
 export OPENROUTER_API_KEY=sk-or-...         # any OpenAI-compatible provider
 bash install-tools.sh                        # optional: recon toolchain
