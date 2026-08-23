@@ -282,8 +282,8 @@ Logic checks that read state, then act on state, are TOCTOU-vulnerable. (Also se
 
 ```http
 # Email aliasing
-attacker+1@gmail.com, attacker+2@gmail.com         # Plus-aliasing
-attacker.@gmail.com, a.t.t.acker@gmail.com         # Dots ignored on Gmail
+you+1@example.com, you+2@example.com         # Plus-aliasing
+you.@example.com, y.o.u@example.com         # Dots ignored (common provider behavior)
 attacker@googlemail.com                            # gmail/googlemail equivalence
 
 # Phone number recycling (number-portable VOIP) — identity not unique
