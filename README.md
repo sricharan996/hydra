@@ -176,6 +176,16 @@ Machine-indexed in [`skills/index.json`](skills/index.json) so agents route prog
 | Deception Technology | 6 | Honeytokens · canarytokens · breach detection |
 | Hardware & Firmware Security | 4 | CHIPSEC/UEFI audit · Secure Boot bypass · TPM attestation · bootkit hunting |
 
+### ♾️ Loop Mode — autonomous continuous hunting
+
+```bash
+./scripts/hydra_loop.sh doctor        # pre-flight: audits every stop-condition
+tmux new -s hydra                     # survives disconnects
+./scripts/hydra_loop.sh targets.txt 40
+```
+
+Endless cycles of `/hunt` across your authorized target rotation. Built around the six ways agent loops die — context exhaustion (fresh process per cycle, state on disk), "done" declarations (continuous-mode prompt), rate limits (auto-backoff), crashes (watchdog restart), diminishing returns (target+methodology rotation), and disconnects (tmux). Scope gate runs before every cycle; `doctor` audits all of it.
+
 ### The core library — original 111 hand-built modules
 
 The hand-crafted foundation beneath the catalog: **38** web exploitation (XSS→smuggling→desync), **16** platform attacks (AD/kerberos/AD CS, privesc), **11** binary exploitation (heap/ROP/kernel/V8), **9** recon, **6** crypto, **3** mobile, **2** AI security — plus the WAF bypass database, error-based SSTI & modern-desync deep-dives, ORM filter injection, XS-Leaks and Next.js attack playbooks.
