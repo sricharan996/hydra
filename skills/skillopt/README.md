@@ -74,7 +74,6 @@ optimizer:
   learning_rate: 0.1          # Edit budget per epoch
   validation_split: 0.2       # Held-out trajectories
   max_edits_per_epoch: 5      # Max edits per training step
-  backend_model: claude       # Optimizer model
   validator: bug_bounty       # Task-specific validator
 ```
 

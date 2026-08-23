@@ -20,7 +20,7 @@
 <a href="https://sricharan996.github.io"><img src="https://img.shields.io/badge/🌐_WEBSITE-LIVE-00E5FF?style=for-the-badge&logo=githubpages&logoColor=white"></a>
 <a href="#-quickstart"><img src="https://img.shields.io/badge/SETUP-ONE%20COMMAND-00FF41?style=for-the-badge"></a>
 <a href="#-the-agent-pipeline"><img src="https://img.shields.io/badge/AGENTS-7-FF003C?style=for-the-badge"></a>
-<a href="#skills"><img src="https://img.shields.io/badge/SKILL%20MODULES-931-9D00FF?style=for-the-badge"></a>
+<a href="#skills"><img src="https://img.shields.io/badge/SKILL%20MODULES-989-9D00FF?style=for-the-badge"></a>
 <a href="#-methodology-library"><img src="https://img.shields.io/badge/METHODOLOGY%20DOCS-26-00E5FF?style=for-the-badge"></a>
 <a href="#scripts"><img src="https://img.shields.io/badge/AUTOMATION-16%20SCRIPTS-FF6D00?style=for-the-badge"></a>
 <a href="#-safety-model"><img src="https://img.shields.io/badge/CI%20GUARDRAILS-ACTIVE-00FF41?style=for-the-badge&logo=githubactions&logoColor=white"></a>
@@ -60,7 +60,7 @@
 |--------|:-----:|
 | 🗂️ Tracked files | **246+** |
 | 🤖 AI agents | **7** |
-| 🧩 Skill modules | **931** |
+| 🧩 Skill modules | **989** |
 | 📖 Methodology playbooks | **26** |
 | ⚙️ Automation tools | **26** |
 | 🗺️ Strategy documents | **8** |

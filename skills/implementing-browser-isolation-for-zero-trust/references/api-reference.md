@@ -38,7 +38,6 @@ result = engine.classify_url(
 | news_media | 2 | cnn.com, bbc.com, reuters.com |
 | social_media | 3 | facebook.com, twitter.com, linkedin.com |
 | webmail | 3 | mail.google.com, outlook.live.com |
-| ai_tools | 3 | chat.openai.com, claude.ai |
 | file_sharing | 4 | wetransfer.com, mega.nz, mediafire.com |
 | admin_console | 4 | console.aws.amazon.com, portal.azure.com |
 | newly_registered | 5 | (domains < 30 days old) |

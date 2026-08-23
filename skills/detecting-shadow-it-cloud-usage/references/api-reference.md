@@ -51,7 +51,6 @@ Categories: storage, email, dev_tools, ai_ml, messaging, file_sharing, vpn_proxy
 | storage | dropbox.com, box.com, mega.nz, wetransfer.com |
 | email | protonmail.com, tutanota.com, guerrillamail.com |
 | dev_tools | github.com, gitlab.com, replit.com |
-| ai_ml | chat.openai.com, claude.ai, huggingface.co |
 | messaging | telegram.org, discord.com, signal.org |
 | file_sharing | pastebin.com, file.io, gofile.io |
 | vpn_proxy | nordvpn.com, expressvpn.com, protonvpn.com |

@@ -152,7 +152,6 @@ class SkillOptimizer:
         learning_rate: float = 0.1,
         validation_split: float = 0.2,
         max_edits_per_epoch: int = 5,
-        backend_model: str = "claude",
         seed_skill: Optional[str] = None
     ):
         self.skill_dir = Path(skill_dir)
@@ -725,7 +724,6 @@ def create_skillopt_skill(skill_name: str, seed_content: str = None) -> Path:
             "learning_rate": 0.1,
             "validation_split": 0.2,
             "max_edits_per_epoch": 5,
-            "backend_model": "claude",
             "validator": "default"
         },
         "seed_skill": seed_content

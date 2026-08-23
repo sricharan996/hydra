@@ -3,7 +3,6 @@ optimizer:
   learning_rate: 0.1
   validation_split: 0.2
   max_edits_per_epoch: 5
-  backend_model: claude
   validator: bug_bounty
 seed_skill: |
   # Bug Bounty Hunting Skill

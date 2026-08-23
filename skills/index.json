@@ -11480,6 +11480,470 @@
       "category": "web"
     },
     {
+      "name": "offensive-active-directory",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "\"Active Directory attack methodology for internal network red team engagements. Covers reconnaissance (BloodHound, PowerView, ADExplorer), credential abuse (Kerberoasting, ASREProasting, NTLM relay, LLMNR/NBT-NS poisoning), privilege escalation (ACL abuse, GPO abuse, unconstraine",
+      "category": "platform"
+    },
+    {
+      "name": "offensive-advanced-redteam",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "",
+      "category": "other"
+    },
+    {
+      "name": "offensive-ai-security",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "",
+      "category": "other"
+    },
+    {
+      "name": "offensive-basic-exploitation",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "",
+      "category": "other"
+    },
+    {
+      "name": "offensive-bluetooth-ble",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "\"Bluetooth Low Energy (BLE) attack methodology \u2014 GATT enumeration, characteristic read/write without auth, pairing downgrade (Just Works forced), LE Secure Connections bypass, MITM via active relay, sniffing with Sniffle (TI CC1352) / Ubertooth / Frontline, encryption key extract",
+      "category": "other"
+    },
+    {
+      "name": "offensive-bluetooth-classic",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "\"Bluetooth Classic (BR/EDR) attack methodology \u2014 device discovery, service enumeration via SDP, LMP/L2CAP layer attacks, legacy PIN cracking (BlueBorne / KNOB), Bluetooth file-transfer abuse (BlueSnarfing legacy), unauthenticated profile abuse (HSP, HFP, OPP), and modern relevanc",
+      "category": "other"
+    },
+    {
+      "name": "offensive-bug-identification",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "",
+      "category": "other"
+    },
+    {
+      "name": "offensive-business-logic",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "\"Business logic vulnerability testing for web/mobile/API engagements. Covers workflow bypass, state machine violations, multi-step process abuse, price/quantity/discount manipulation, currency confusion, coupon stacking, refund/chargeback abuse, race conditions on logic boundarie",
+      "category": "other"
+    },
+    {
+      "name": "offensive-cloud",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "\"Cloud security attack methodology covering AWS, Azure, and GCP. Includes credential harvesting (IMDS, ~/.aws, env vars, leaked CI secrets, instance roles), enumeration with cloud-specific tools (pacu, ScoutSuite, Prowler, ROADtools, gcp_enum), privilege escalation paths (IAM Pas",
+      "category": "other"
+    },
+    {
+      "name": "offensive-crash-analysis",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "",
+      "category": "other"
+    },
+    {
+      "name": "offensive-deauth-disassoc",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "\"Deauthentication and disassociation attacks against 802.11 networks \u2014 targeted single-client deauth for handshake capture, broadcast deauth for DoS (with authorization), action-frame attacks bypassing 802.11w (PMF), beacon flooding, mdk4 / aireplay-ng tooling, and rate-limit / P",
+      "category": "web"
+    },
+    {
+      "name": "offensive-deserialization",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "",
+      "category": "other"
+    },
+    {
+      "name": "offensive-edr-evasion",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "",
+      "category": "other"
+    },
+    {
+      "name": "offensive-evil-twin",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "\"Evil Twin / KARMA / Mana access point methodology \u2014 rogue AP construction with hostapd-mana / wifiphisher / airgeddon, KARMA universal probe response, Mana selective probe response, captive portal phishing, deauth-driven client coercion to attacker AP, MAC randomization defeat v",
+      "category": "other"
+    },
+    {
+      "name": "offensive-exploit-dev-course",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "",
+      "category": "other"
+    },
+    {
+      "name": "offensive-exploit-development",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "",
+      "category": "other"
+    },
+    {
+      "name": "offensive-fast-checking",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "",
+      "category": "other"
+    },
+    {
+      "name": "offensive-file-upload",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "",
+      "category": "web"
+    },
+    {
+      "name": "offensive-fuzzing",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "\"Practical offensive fuzzing methodology covering target identification, fuzzer selection (AFL++, libFuzzer, Honggfuzz, Boofuzz, syzkaller), harness writing, corpus curation, mutation strategies, coverage measurement, and crash triage. Use when setting up or running fuzz campaign",
+      "category": "other"
+    },
+    {
+      "name": "offensive-fuzzing-course",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "",
+      "category": "other"
+    },
+    {
+      "name": "offensive-graphql",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "",
+      "category": "web"
+    },
+    {
+      "name": "offensive-idor",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "",
+      "category": "web"
+    },
+    {
+      "name": "offensive-initial-access",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "",
+      "category": "other"
+    },
+    {
+      "name": "offensive-iot",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "\"IoT and embedded device security testing methodology. Covers hardware reconnaissance (UART, JTAG, SWD, SPI flash, I2C EEPROM, eMMC chip-off), firmware acquisition (vendor portals, OTA capture, flash dump, binwalk extraction), firmware analysis (filesystem mounting, binary triage",
+      "category": "other"
+    },
+    {
+      "name": "offensive-jwt",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "\"JWT attack methodology for penetration testers. Covers algorithm confusion (alg:none, RS256\u2192HS256), weak HMAC secret brute force, kid parameter injection (SQLi, path traversal), jku/x5u/jwk header injection, JWKS cache poisoning, JWS/JWE confusion, timing attacks, and mobile JWT",
+      "category": "web"
+    },
+    {
+      "name": "offensive-keylogger-arch",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "",
+      "category": "other"
+    },
+    {
+      "name": "offensive-krack-fragattacks",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "\"KRACK (CVE-2017-13077..082) and FragAttacks (CVE-2020-24586..588 + 26139-26147) \u2014 key reinstallation, fragmentation, and aggregation attacks against WPA2 supplicants. Covers Vanhoef's test scripts, viability against modern patched stacks (mostly mitigated post-2021), residual un",
+      "category": "other"
+    },
+    {
+      "name": "offensive-lorawan-sub-ghz",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "\"LoRaWAN and sub-GHz (433 / 868 / 915 MHz) attack methodology \u2014 LoRaWAN ABP/OTAA join attack, network/session key reuse, frame counter replay, downlink injection on TTN/Helium-style networks, sub-GHz protocol replay (KeeLoq garage doors, fixed-code remotes, TPMS spoofing, smart p",
+      "category": "other"
+    },
+    {
+      "name": "offensive-mitigations",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "",
+      "category": "other"
+    },
+    {
+      "name": "offensive-mobile",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "\"Mobile (Android + iOS) application penetration testing methodology. Covers static analysis (apktool/jadx for Android, class-dump/Hopper/IDA for iOS), dynamic instrumentation with Frida and Objection, SSL pinning bypass strategies, root/jailbreak detection bypass, deep-link / URL",
+      "category": "mobile"
+    },
+    {
+      "name": "offensive-oauth",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "",
+      "category": "web"
+    },
+    {
+      "name": "offensive-open-redirect",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "",
+      "category": "web"
+    },
+    {
+      "name": "offensive-osint",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "\"Comprehensive OSINT methodology skill for offensive security, red team intelligence gathering, and bug bounty reconnaissance. Covers domain recon, email harvesting, social media profiling, GitHub/code leaks, Shodan/Censys enumeration, breach data lookup, employee profiling, infr",
+      "category": "other"
+    },
+    {
+      "name": "offensive-osint-methodology",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "",
+      "category": "other"
+    },
+    {
+      "name": "offensive-parameter-pollution",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "",
+      "category": "web"
+    },
+    {
+      "name": "offensive-race-condition",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "",
+      "category": "other"
+    },
+    {
+      "name": "offensive-rce",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "",
+      "category": "other"
+    },
+    {
+      "name": "offensive-reporting",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "\"Penetration test and red team report writing methodology. Covers executive summary structuring (risk-led narrative for non-technical readers), technical finding format (title, severity, affected scope, narrative, reproduction steps, impact, remediation, references), CVSS v3.1 / ",
+      "category": "other"
+    },
+    {
+      "name": "offensive-request-smuggling",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "",
+      "category": "web"
+    },
+    {
+      "name": "offensive-shellcode",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "\"Shellcode development reference for offensive security engagements. Use when writing custom x86/x64 shellcode, implementing position-independent code (PIC), building shellcode loaders, evading AV/EDR detection, or converting PE files to shellcode. Covers null byte avoidance, API",
+      "category": "other"
+    },
+    {
+      "name": "offensive-sqli",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "\"SQL injection testing skill for offensive security assessments and bug bounty hunting. Covers error-based, UNION-based, boolean/time-based blind, out-of-band, second-order, NoSQL, GraphQL, WebSocket, and JSON-operator SQLi. Includes WAF bypass techniques, database-specific explo",
+      "category": "web"
+    },
+    {
+      "name": "offensive-ssrf",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "",
+      "category": "web"
+    },
+    {
+      "name": "offensive-ssti",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "",
+      "category": "web"
+    },
+    {
+      "name": "offensive-toctou",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "\"Time-of-Check / Time-of-Use (TOCTOU) race condition exploitation methodology across binary, kernel, filesystem, web, and container layers. Covers symbolic-link races (open/access/stat split), file-descriptor races, fopen/realpath traversal races, /proc and procfs races, FUSE-bac",
+      "category": "other"
+    },
+    {
+      "name": "offensive-vuln-classes",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "",
+      "category": "other"
+    },
+    {
+      "name": "offensive-waf-bypass",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "",
+      "category": "other"
+    },
+    {
+      "name": "offensive-wifi",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "\"Wireless / 802.11 attack methodology for red team engagements and wireless security assessments. Covers monitor-mode setup, WPA/WPA2-PSK handshake capture and PMKID attacks, WPA3 SAE downgrade and Dragonblood, WPA-Enterprise (EAP) attacks (MSCHAPv2 cracking, EAP-TLS cert theft, ",
+      "category": "other"
+    },
+    {
+      "name": "offensive-wifi-recon",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "\"Wi-Fi reconnaissance methodology \u2014 adapter selection, monitor mode and packet injection setup, regulatory domain handling, multi-band airspace mapping, hidden SSID discovery, BSSID/ESSID/channel/PMF/encryption fingerprinting, client probe analysis, vendor OUI lookup, war-driving",
+      "category": "recon"
+    },
+    {
+      "name": "offensive-windows-boundaries",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "",
+      "category": "platform"
+    },
+    {
+      "name": "offensive-windows-mitigations",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "",
+      "category": "platform"
+    },
+    {
+      "name": "offensive-wpa-enterprise",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "\"WPA/WPA2/WPA3-Enterprise (802.1X / EAP) attack methodology \u2014 EAP method identification (PEAP-MSCHAPv2, EAP-TTLS, EAP-TLS, EAP-GTC, EAP-PWD, EAP-FAST), evil-twin RADIUS attacks with eaphammer for credential capture, MSCHAPv2 challenge-response cracking, EAP-TLS client certificate",
+      "category": "other"
+    },
+    {
+      "name": "offensive-wpa2-psk",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "\"WPA/WPA2-PSK attack methodology \u2014 four-way handshake capture via targeted deauthentication, PMKID attacks (no client required), hcxdumptool / hcxpcapngtool conversion to hashcat hc22000 format, GPU-accelerated cracking with dictionary, mask, and rule-based attacks, vendor defaul",
+      "category": "other"
+    },
+    {
+      "name": "offensive-wpa3-sae",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "\"WPA3 / SAE (Simultaneous Authentication of Equals) attack methodology \u2014 transition-mode (mixed WPA2/WPA3) downgrade, Dragonblood side-channel attacks (CVE-2019-9494, 9495, 13377, 13456), SAE auth flooding for AP CPU exhaustion, Hash-to-Element (H2E) timing analysis, group downgr",
+      "category": "other"
+    },
+    {
+      "name": "offensive-wps",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "\"WPS (Wi-Fi Protected Setup) PIN attack methodology \u2014 Pixie Dust offline attack against vulnerable chipsets (Ralink, Realtek, Broadcom, MediaTek), online PIN brute-force with reaver/bully, lockout handling, time-of-day evasion, WPS push-button vulnerability windows, and PIN-to-PS",
+      "category": "other"
+    },
+    {
+      "name": "offensive-xss",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "",
+      "category": "web"
+    },
+    {
+      "name": "offensive-xxe",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "",
+      "category": "web"
+    },
+    {
+      "name": "offensive-z-wave",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "\"Z-Wave attack methodology \u2014 sniffing with Z-Force / EZ-Wave / RTL-SDR + ZniffMobile, S0 (legacy) network-key derivation flaw and key reuse, S2 (modern) ECDH commissioning analysis, replay/injection on unauthenticated nodes, default-key brute-force on test deployments, and home-a",
+      "category": "other"
+    },
+    {
+      "name": "offensive-zigbee-thread-matter",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "\"Zigbee, Thread, and Matter mesh-protocol attack methodology \u2014 IEEE 802.15.4 sniffing with TI CC2531 / CC2540 / Sonoff Zigbee Dongle E, KillerBee toolkit, Touchlink commissioning abuse with the well-known transport key, replay/injection attacks, Zigbee Cluster Library command abu",
+      "category": "other"
+    },
+    {
       "name": "open-redirect",
       "files": [
         "SKILL.md"
@@ -16503,15 +16967,15 @@
     }
   ],
   "summary": {
-    "other": 352,
-    "web": 273,
+    "other": 391,
+    "web": 287,
     "forensics-defense": 171,
-    "platform": 67,
+    "platform": 70,
     "crypto": 18,
-    "recon": 16,
+    "recon": 17,
     "binary": 14,
-    "ai": 10,
-    "mobile": 10
+    "mobile": 11,
+    "ai": 10
   },
-  "total": 931
+  "total": 989
 }

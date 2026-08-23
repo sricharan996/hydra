@@ -20646,7 +20646,6 @@ They can also be used to generate interesting prompts.
 * [ChatGPT - OpenAI](https://chat.openai.com)
 * [Gemini - Google](https://gemini.google.com)
 * [Le Chat - Mistral AI](https://chat.mistral.ai)
-* [the AI agent - the AI vendor](https://claude.ai)
 
 List of "payloads" prompts
 

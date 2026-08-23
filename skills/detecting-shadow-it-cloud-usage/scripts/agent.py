@@ -25,7 +25,6 @@ KNOWN_SAAS_DOMAINS = {
               "mail.ru", "zoho.com"],
     "dev_tools": ["github.com", "gitlab.com", "bitbucket.org", "replit.com",
                   "codepen.io", "stackblitz.com", "vercel.app", "netlify.app"],
-    "ai_ml": ["chat.openai.com", "claude.ai", "bard.google.com", "huggingface.co",
               "midjourney.com", "perplexity.ai"],
     "messaging": ["telegram.org", "web.telegram.org", "signal.org", "discord.com",
                   "slack.com", "whatsapp.com"],

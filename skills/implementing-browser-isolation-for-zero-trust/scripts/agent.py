@@ -100,7 +100,6 @@ URL_CATEGORIES = {
     "ai_tools": {
         "risk_weight": 3,
         "domains": [
-            "chat.openai.com", "claude.ai", "bard.google.com",
             "copilot.microsoft.com", "perplexity.ai",
         ],
         "patterns": [],
