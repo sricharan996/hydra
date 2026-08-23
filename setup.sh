@@ -42,7 +42,10 @@ if command -v opencode >/dev/null 2>&1; then
   echo "[✓] opencode found: $(command -v opencode)"
 else
   echo "[*] opencode not found — installing automatically..."
-  curl -fsSL https://opencode.ai/install | bash
+  INSTALLER=$(mktemp)
+  curl -fsSL https://opencode.ai/install -o "$INSTALLER"
+  echo "    installer sha256: $(sha256sum "$INSTALLER" | cut -d' ' -f1)"
+  bash "$INSTALLER"; rm -f "$INSTALLER"
   fix_path
   if command -v opencode >/dev/null 2>&1; then
     echo "[✓] opencode installed: $(opencode --version 2>/dev/null || echo ok)"
@@ -82,6 +85,16 @@ mkdir -p "$HOME/scripts" \
 echo "[*] Installing helper scripts -> ~/scripts"
 cp "$REPO_DIR/scripts/"* "$HOME/scripts/" 2>/dev/null || true
 chmod +x "$HOME/scripts/"*.sh "$HOME/scripts/"*.py 2>/dev/null || true
+
+# ---------- step 4b: scope policy gate default ----------
+mkdir -p "$OC_DIR"
+[ -f "$OC_DIR/SCOPE_ALLOWLIST.txt" ] || cat > "$OC_DIR/SCOPE_ALLOWLIST.txt" <<'EOL'
+# Your authorized program domains, one per line. Wildcards allowed.
+# Examples:
+#   example.com          <- covers all subdomains
+#   *.example.dev
+localhost
+EOL
 
 # ---------- step 5: memory seeds ----------------------------------
 mkdir -p "$OC_DIR/agent_memory"

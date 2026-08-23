@@ -28,6 +28,9 @@ WHY: Testing one byte out of scope is a policy violation. This phase is non-nego
 - Note explicit exclusions (out-of-scope subdomains, wildcard limits)
 - If scope is unclear → STOP and ask, never guess
 
+### Phase 1.5: Policy Gate
+**MANDATORY:** `bash ~/scripts/scope_check.sh "$TARGET"` → exit 0 = proceed, 1 = STOP entirely.
+
 ### Phase 2: Passive Enumeration (zero packets to target)
 WHY: CT logs, archives and third-party datasets know the target's history better than its DNS does today — and touching them costs nothing.
 - Certificate transparency: crt.sh, certspotter (fresh certs = fresh infra)
