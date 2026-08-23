@@ -79,6 +79,10 @@
       "description": "Debug an issue, fix errors, update agent memory",
       "template": "Debug the following issue: $ARGUMENTS. Read the relevant agent memory from ~/.config/opencode/agent_memory/. Identify root cause, fix the issue, update agent memory with the lesson learned. Use ~/.config/opencode/agents/debug.md methodology."
     },
+    "loop": {
+      "description": "♾️ Enter autonomous LOOP MODE — endless hunting, no stopping",
+      "template": "Read and fully follow the LOOP PROTOCOL at ~/.config/opencode/common/LOOP_MODE.md. Enter LOOP MODE now on $ARGUMENTS and do not exit until the user says STOP."
+    },
     "memory": {
       "description": "View or update agent memory files",
       "template": "Manage agent memory for $ARGUMENTS. Read from ~/.config/opencode/agent_memory/. Show current memory, append new learnings, or update existing entries. Available agents: hunter, verifier, reporter, plan, debug."
