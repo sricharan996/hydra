@@ -347,3 +347,9 @@ A curated list of awesome AI security related frameworks, standards, learning re
 * [Leaked System Prompts](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools) - _Collection of leaked system prompts from commercial AI tools — useful for understanding real-world prompt engineering and attack surfaces._
 * [SemGuard Arabic Security Dataset](https://huggingface.co/datasets/AG-31625874/SemGuard-Dataset) - _First validated Arabic/Arabizi LLM security dataset — 807 examples across 7 threat categories, validated via 3-judge LLM-as-Judge pipeline (GPT-4o, Grok-4, Llama 3.3 70B), Fleiss' κ=0.839. Includes a 527-example inter-judge disagreement corpus._
   
+
+---
+
+## Appendix: Modern CLI craft references
+- [awesome-modern-cli](https://github.com/thegdsks/awesome-modern-cli) — curated modern CLI patterns & tools
+- [gum](https://github.com/charmbracelet/gum) · [fzf](https://github.com/junegunn/fzf) · [Textual](https://github.com/Textualize/textual)

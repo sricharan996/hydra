@@ -24,6 +24,18 @@ done
 
 echo "==============================================="
 echo "   🐉 HYDRA — AI BUG BOUNTY SYSTEM SETUP"
+
+# ---------- optional glamour (gum) ----------
+if command -v gum >/dev/null 2>&1; then
+  h_title(){ gum style --foreground "#2EE6A8" --bold "$1"; }
+  h_step(){ gum spin --spinner dot --title "$1" -- bash -c "${2:-true}"; }
+  h_ok(){ gum style --foreground "#2EE6A8" "✓ $1"; }
+else
+  h_title(){ echo "$1"; }
+  h_step(){ echo "[*] $1"; ${2:-true}; }
+  h_ok(){ echo "[✓] $1"; }
+fi
+
 echo "==============================================="
 
 # ---------- identity -------------------------------------------
@@ -57,21 +69,21 @@ else
 fi
 
 # ---------- step 2: install config ------------------------------
-echo "[*] Installing agents, skills, methodology -> $OC_DIR"
+h_step "Installing agents, skills, methodology"
 mkdir -p "$OC_DIR"
 cp -r "$REPO_DIR/agents"    "$OC_DIR/"
 cp -r "$REPO_DIR/skills"    "$OC_DIR/"
 cp -r "$REPO_DIR/common"    "$OC_DIR/"
 cp -r "$REPO_DIR/templates" "$OC_DIR/"
 
-echo "[*] Rendering opencode.jsonc with your identity"
+h_step "Rendering your identity into config"
 sed -e "s|__HOME__|$HOME|g" \
     -e "s|__HANDLE__|$HANDLE|g" \
     -e "s|__EMAIL__|$EMAIL|g" \
     "$REPO_DIR/opencode.jsonc.template" > "$OC_DIR/opencode.jsonc"
 
 # ---------- step 3: workspace dirs -------------------------------
-echo "[*] Creating recon workspace"
+h_step "Creating recon workspace"
 mkdir -p "$HOME/scripts" \
          "$HOME/recon_reports/companies" \
          "$HOME/recon_reports/verified_findings" \
@@ -82,7 +94,7 @@ mkdir -p "$HOME/scripts" \
          "$HOME/payloads"
 
 # ---------- step 4: helper scripts -------------------------------
-echo "[*] Installing helper scripts -> ~/scripts"
+h_step "Installing helper scripts"
 cp "$REPO_DIR/scripts/"* "$HOME/scripts/" 2>/dev/null || true
 chmod +x "$HOME/scripts/"*.sh "$HOME/scripts/"*.py 2>/dev/null || true
 
