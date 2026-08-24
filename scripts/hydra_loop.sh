@@ -95,8 +95,9 @@ while true; do
     log "[ok] cycle hit planned timeout — that's the design. continuing."; BACKOFF=60
   elif echo "$OUT" | grep -qiE "rate.?limit|429|quota"; then
     BACKOFF=$((BACKOFF*2)); [ $BACKOFF -gt 1800 ] && BACKOFF=1800
-    log "[backoff] rate limit detected — sleeping ${BACKOFF}s"
-    sleep "$BACKOFF"
+    log "[backoff] rate limit detected — sleeping ${BACKOFF}s (🎮 'hydra game' to pass time)"
+    source "$HERE/hydra_anim.sh"
+    anim_start "cooling down… agents resume automatically"; sleep "$BACKOFF"; anim_stop
   elif [ $RC -ne 0 ]; then
     log "[restart] opencode exited rc=$RC — restarting next cycle in 15s"
     sleep 15
