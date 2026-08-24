@@ -26,13 +26,13 @@ echo "==============================================="
 echo "   🐉 HYDRA — AI BUG BOUNTY SYSTEM SETUP"
 
 # ---------- optional glamour (gum) ----------
-if command -v gum >/dev/null 2>&1; then
+if command -v gum >/dev/null 2>&1 && [ -t 0 ]; then
   h_title(){ gum style --foreground "#2EE6A8" --bold "$1"; }
-  h_step(){ gum spin --spinner dot --title "$1" -- bash -c "${2:-true}"; }
+  h_step(){ printf "[*] %s\n" "$1"; }
   h_ok(){ gum style --foreground "#2EE6A8" "✓ $1"; }
 else
   h_title(){ echo "$1"; }
-  h_step(){ echo "[*] $1"; ${2:-true}; }
+  h_step(){ printf "[*] %s\n" "$1"; }
   h_ok(){ echo "[✓] $1"; }
 fi
 
