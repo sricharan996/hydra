@@ -4,6 +4,21 @@
   // setup.sh fills __HOME__, __HANDLE__ and __EMAIL__ for you.
   // ============================================================
   "$schema": "https://opencode.ai/config.json",
+  "theme": {
+    "primary": "#2EE6A8",
+    "secondary": "#58A6FF",
+    "accent": "#F0B429",
+    "error": "#FF5C5C",
+    "warning": "#F0B429",
+    "success": "#2EE6A8",
+    "info": "#58A6FF",
+    "text": "#E7EEF5",
+    "textMuted": "#93A1B3",
+    "background": "#0A0E13",
+    "backgroundPanel": "#111823",
+    "border": "#1E2936",
+    "borderActive": "#2EE6A8"
+  },
   "model": "omniroute/auto",
   "small_model": "omniroute/fast",
   "lsp": true,
